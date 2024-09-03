@@ -1,0 +1,20 @@
+name: Verify Script Execution
+
+on: [push, pull_request]
+
+jobs:
+  verify-execution:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Check if script-ran.txt exists anywhere in the repository
+      run: |
+        if find . -name "script-ran.txt" | grep -q "script-ran.txt"; then
+          echo "The script was successfully executed and script-ran.txt was found."
+        else
+          echo "The script was not executed or the output file is missing."
+          exit 1
+        fi
+
