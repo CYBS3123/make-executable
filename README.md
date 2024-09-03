@@ -16,11 +16,10 @@ Your task is to clone a repository that contains a shell script (`script.sh`). T
 
 ### 1. Clone the Repository
 
-Open your terminal and clone the repository using:
+Open your terminal and clone the repository using (make sure you use the ssh url):
 
-\```bash
 git clone <repository_url>
-\```
+
 
 Replace `<repository_url>` with the actual URL of the repository provided in class.
 
@@ -28,23 +27,17 @@ Replace `<repository_url>` with the actual URL of the repository provided in cla
 
 Navigate to the cloned repository's directory:
 
-\```bash
 cd <repository_name>
-\```
 
 Use the `chmod` command to make the script executable:
 
-\```bash
 chmod +x script.sh
-\```
 
 ### 3. Run the Script
 
 Execute the script:
 
-\```bash
 ./script.sh
-\```
 
 The script will create a file named `script-ran.txt` or another indicator file that confirms the script has been executed.
 
@@ -52,21 +45,15 @@ The script will create a file named `script-ran.txt` or another indicator file t
 
 Stage all the changes:
 
-\```bash
 git add .
-\```
 
 Commit the changes with a meaningful message:
 
-\```bash
 git commit -m "Executed script.sh and added the output file"
-\```
 
 Push your changes to GitHub:
 
-\```bash
 git push origin main
-\```
 
 ---
 
